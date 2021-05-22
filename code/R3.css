@@ -34,7 +34,7 @@
 }
 
 .columna-1{
-    background-image: url("/code/queen.jpg");
+    background-image: url("queen.jpg");
     background-position: center;
     background-size: cover;
     display: flex;
