@@ -1,5 +1,5 @@
 var content = document.querySelector('#dataContent')
-
+// Se cargan los datos cuando se inicializa la pagina
 window.onload = function() {
     getWeather("Cordoba");
     getWeather("Buenos Aires");
@@ -10,6 +10,7 @@ window.onload = function() {
     getWeather("Usuahia");
 };
 
+// Metodo de consulta de API
 function getWeather(location) {
     fetch("http://api.weatherbit.io/v2.0/current?key=c89435948b4145c49b796b2a4e18d861&city="+location+"&country=AR")
         .then(res => res.json())
@@ -17,6 +18,7 @@ function getWeather(location) {
         .catch( err => { console.log(err) });
 }
 
+// Inserta el objeto en la tabla
 function insertTable (city){
     content.innerHTML +=
     `<tr>
